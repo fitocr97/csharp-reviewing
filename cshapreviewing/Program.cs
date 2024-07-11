@@ -141,7 +141,7 @@ class Sale
 
 
 //interface
-
+/*
 Send send = new Send();
 send.Save();
 
@@ -179,4 +179,78 @@ class Send : ISave
         Console.WriteLine("Enviado");
     }
 }
+*/
 
+
+//generics
+
+
+var numbers = new MyList<int>(5);
+var names = new MyList<string>(5);
+var beers = new MyList<Beer>(3);
+
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+numbers.Add(4);
+numbers.Add(5);
+numbers.Add(6);
+Console.WriteLine(numbers.GetContent());
+
+names.Add("juan");
+names.Add("pedro");
+names.Add("karla");
+names.Add("kairo");
+names.Add("julia");
+names.Add("raul");
+Console.WriteLine(names.GetContent());
+
+beers.Add(new Beer() { Name = "imperial", Price = 1 });
+beers.Add(new Beer() { Name = "pilsen", Price = 2 });
+beers.Add(new Beer() { Name = "babaria", Price = 3 });
+Console.WriteLine(beers.GetContent());
+
+public class MyList<T>  //T tipo de dato que desconocemos
+{
+    private List<T> _list;
+    private int _limit;
+
+    public MyList(int limit) 
+    {
+        _limit = limit;
+        _list = new List<T>(); //inicializar el elemento
+    }
+
+
+    public void Add(T item)
+    {
+        if (_list.Count < _limit) 
+        {
+            _list.Add(item);
+        }
+    }
+
+    public string GetContent()
+    {
+        string content = "";
+
+        foreach (var item in _list)
+        {
+            content += item + " , ";
+        }
+
+        return content;
+    }
+}
+
+public class Beer
+{
+    public string Name { get; set; }
+    public int Price { get; set; }
+
+    public override string ToString()
+    {
+        return Name.ToString()  + " =" + Price.ToString(); 
+    }
+
+}
