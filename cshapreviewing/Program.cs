@@ -63,7 +63,7 @@ class SaleWithTax : Sale  //herencia como en el contrutor padre pide dato hay qu
 
 
 // sobrescribir override
-
+/*
 SaleWithTax sale = new SaleWithTax(20,1.16m);
 var message = sale.GetInfo();
 
@@ -99,5 +99,37 @@ class SaleWithTax : Sale
     public override string GetInfo() //metodo del padre pero sobrescrito
     {
         return "el total es "+ Total + " impuesto " + Tax;
+    }
+}*/
+
+//sobrecarga
+
+using System.Security.Principal;
+
+Sale sale = new Sale(20);
+sale.GetInfo();
+
+Console.WriteLine(sale.GetInfo());
+Console.WriteLine(sale.GetInfo("hola"));
+
+class Sale
+{
+    public decimal Total { get; set; }
+    private string _some;
+
+    public Sale(decimal total)
+    {
+        Total = total;
+    }
+
+
+    public virtual string GetInfo()
+    {
+        return "El total es " + Total;
+    }
+
+    public virtual string GetInfo(string hola)
+    {
+        return "El total es " + Total + " " +hola;
     }
 }
