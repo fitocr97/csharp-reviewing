@@ -1,0 +1,15 @@
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\bin\Debug\net8.0\cshapreviewing.exe
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\bin\Debug\net8.0\cshapreviewing.deps.json
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\bin\Debug\net8.0\cshapreviewing.runtimeconfig.json
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\bin\Debug\net8.0\cshapreviewing.dll
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\bin\Debug\net8.0\cshapreviewing.pdb
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.AssemblyInfoInputs.cache
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.AssemblyInfo.cs
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.csproj.CoreCompileInputs.cache
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.sourcelink.json
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.dll
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\refint\cshapreviewing.dll
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.pdb
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\cshapreviewing.genruntimeconfig.cache
+C:\Users\fito\source\repos\cshapreviewing\cshapreviewing\obj\Debug\net8.0\ref\cshapreviewing.dll
