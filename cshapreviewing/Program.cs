@@ -22,7 +22,7 @@ class Sale //objeto
 
 
 // herencia
-
+/*
 Sale sale = new Sale(20);
 var message = sale.GetInfo();
 
@@ -58,5 +58,46 @@ class SaleWithTax : Sale  //herencia como en el contrutor padre pide dato hay qu
     public string GetInfoWithTax()
     {
         return "el impuesto es "+ "impuesto " + Tax;
+    }
+}*/
+
+
+// sobrescribir override
+
+SaleWithTax sale = new SaleWithTax(20,1.16m);
+var message = sale.GetInfo();
+
+Console.WriteLine(message);
+
+class Sale 
+{
+    public decimal Total { get; set; }
+    private string _some; 
+
+    public Sale(decimal total)   
+    {
+        Total = total;
+    }
+
+    
+    public virtual string GetInfo()
+    {
+        return "El total es " + Total;
+    }
+}
+
+class SaleWithTax : Sale  
+{
+
+    public decimal Tax { get; set; }
+
+    public SaleWithTax(decimal total, decimal tax) : base(total)
+    {
+        Tax = tax;
+    }
+
+    public override string GetInfo() //metodo del padre pero sobrescrito
+    {
+        return "el total es "+ Total + " impuesto " + Tax;
     }
 }
