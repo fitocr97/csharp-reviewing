@@ -18,7 +18,8 @@ class Sale //objeto
     {
         return "El total es " + Total;
     }
-}*/
+}
+*/
 
 
 // herencia
@@ -59,7 +60,8 @@ class SaleWithTax : Sale  //herencia como en el contrutor padre pide dato hay qu
     {
         return "el impuesto es "+ "impuesto " + Tax;
     }
-}*/
+}
+*/
 
 
 // sobrescribir override
@@ -100,10 +102,12 @@ class SaleWithTax : Sale
     {
         return "el total es "+ Total + " impuesto " + Tax;
     }
-}*/
+}
+*/
+
 
 //sobrecarga
-
+/*
 using System.Security.Principal;
 
 Sale sale = new Sale(20);
@@ -128,8 +132,51 @@ class Sale
         return "El total es " + Total;
     }
 
-    public virtual string GetInfo(string hola)
+    public virtual string GetInfo(string hola) //sobrecarga
     {
         return "El total es " + Total + " " +hola;
     }
 }
+*/
+
+
+//interface
+
+Send send = new Send();
+send.Save();
+
+Sale sale = new Sale();
+sale.Save();
+
+
+interface ISale
+{
+    decimal Total { get; set; }
+}
+
+interface ISave
+{
+    public void Save()
+    {
+        
+    }
+}
+
+class Sale : ISale, ISave //implementar interface obliga a poner total y el metodo
+{
+    public decimal Total { get; set; } //interfaz agrega atributo
+
+    public void Save()  //interfaz obliga agregar el metodo
+    {
+        Console.WriteLine("guardado");
+    }
+}
+
+class Send : ISave
+{
+    public void Save()  //interfaz obliga agregar el metodo
+    {
+        Console.WriteLine("Enviado");
+    }
+}
+
