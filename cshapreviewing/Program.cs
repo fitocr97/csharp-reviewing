@@ -384,7 +384,7 @@ void SomeTwo(Func<string, string> fn, string message) //string entrada, string s
 }
 */
 
-
+/*
 //Lambda  arrow functions
 
 Func<int, int, int> sub = (int a, int b) => a - b;
@@ -409,5 +409,29 @@ Some((a, b) => a + b, 5);
 void Some(Func<int, int, int> fn, int number)
 {
     var result = fn(number, number);
+}*/
+
+
+//LINQ
+//hacer sql en c#
+
+var names = new List<string>() //origen datos
+{
+    "Fito", "Tati", "Ange", "Antho", "Rodo"
+};
+
+
+var namesResult = from name in names orderby name select name; //consulta
+
+var namesResultLength = from name in names where name.Length > 2 && name.Length < 5 select name; //consulta
+
+foreach (var name in namesResult)
+{
+    Console.WriteLine(name);
 }
 
+
+foreach (var name in namesResultLength)
+{
+    Console.WriteLine(name);
+}
