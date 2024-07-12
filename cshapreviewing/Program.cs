@@ -254,8 +254,8 @@ public class Beer
 }
 */
 
-
-//serelizacion deserilazacion
+/*
+//serelizacion 
 
 using System.Text.Json; //libreria
 
@@ -278,5 +278,31 @@ public class People
     public string Name { get; set; }
     public int Age { get; set; }
 }
+*/
 
 
+
+//deserilazacion
+using System.Text.Json; //libreria
+
+People pedro = new People()
+{
+    Name = "Pedro",
+    Age = 11,
+};
+
+string myJson = @"{
+    ""Name"":""Fito"",
+    ""Age"":26    
+}";
+
+
+People? fito  = JsonSerializer.Deserialize<People>(myJson);
+
+Console.WriteLine(fito?.Name + ", " + fito?.Age);  //? puede ser nulo
+
+public class People
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
