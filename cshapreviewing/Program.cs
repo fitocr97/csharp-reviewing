@@ -342,6 +342,7 @@ class Beer
 }
 */
 
+/*
 //guardar funcion en una variable funcion de primera clase
 var show = Show;
 
@@ -381,3 +382,32 @@ void SomeTwo(Func<string, string> fn, string message) //string entrada, string s
     Console.WriteLine(fn(message));
     Console.WriteLine("despues");
 }
+*/
+
+
+//Lambda  arrow functions
+
+Func<int, int, int> sub = (int a, int b) => a - b;
+
+Func<int, int, int> sub2 = ( a, b) => a - b;
+
+Func<int, int> mul = (int a) => a * 2;
+
+Func<int, int> mul2 =  a => a * 2;
+
+
+Func<int, int> some = a => {   //agregar mas lineas en la funcion se abren parentesis
+    a = a * 4;
+    return a;
+};
+
+
+// pasar lambda por parametro
+
+Some((a, b) => a + b, 5);
+
+void Some(Func<int, int, int> fn, int number)
+{
+    var result = fn(number, number);
+}
+
