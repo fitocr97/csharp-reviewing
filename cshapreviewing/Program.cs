@@ -181,10 +181,8 @@ class Send : ISave
 }
 */
 
-
+/*
 //generics
-
-
 var numbers = new MyList<int>(5);
 var names = new MyList<string>(5);
 var beers = new MyList<Beer>(3);
@@ -254,3 +252,31 @@ public class Beer
     }
 
 }
+*/
+
+
+//serelizacion deserilazacion
+
+using System.Text.Json; //libreria
+
+People pedro = new People()
+{
+    Name = "Pedro",
+    Age = 11,
+};
+
+People juan = new People();
+
+juan.Age = 10;
+juan.Name = "Juan";
+
+string json = JsonSerializer.Serialize(juan);
+Console.WriteLine(json);
+
+public class People
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+

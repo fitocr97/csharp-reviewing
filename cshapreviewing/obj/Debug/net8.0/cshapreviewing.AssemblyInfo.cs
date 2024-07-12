@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cshapreviewing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea162b9cfafc59f272f9782932ba12291b6f98c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19f143950d44c4cad849075a6f719ca43cd9d7f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("cshapreviewing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cshapreviewing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
