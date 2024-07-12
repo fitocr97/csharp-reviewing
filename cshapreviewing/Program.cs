@@ -281,7 +281,7 @@ public class People
 */
 
 
-
+/*
 //deserilazacion
 using System.Text.Json; //libreria
 
@@ -306,3 +306,41 @@ public class People
     public string Name { get; set; }
     public int Age { get; set; }
 }
+*/
+
+
+//programacion funcional
+//funcion pura
+
+Console.WriteLine(Sub(2,1));
+
+int Sub(int a, int b)
+{
+    return a - b;
+}
+
+
+//ejemplo de uppercase beer
+
+Beer beer = new Beer() { Name = "Imperial"};
+
+Console.WriteLine(beer.Name);
+Console.WriteLine(ToUpper(beer).Name);
+
+Beer ToUpper(Beer beer)
+{
+    Beer beer2 = new Beer() //al crear otra instancia que se modifique no se modifica la original
+    {
+        Name = beer.Name.ToUpper(),
+    };
+    return beer2;
+}
+
+class Beer
+{
+    public string Name;
+}
+
+
+//guardar funcion en una variable
+
