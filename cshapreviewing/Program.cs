@@ -308,7 +308,7 @@ public class People
 }
 */
 
-
+/*
 //programacion funcional
 //funcion pura
 
@@ -340,7 +340,44 @@ class Beer
 {
     public string Name;
 }
+*/
+
+//guardar funcion en una variable funcion de primera clase
+var show = Show;
+
+show("hola");
+
+Some(show, "hola que tal");
+
+void Show(string message)
+{
+    Console.WriteLine(message);
+}
 
 
-//guardar funcion en una variable
+//action recive elementos pero no retorna nada
 
+void Some(Action<string> fn, string message) //
+{
+    Console.WriteLine("antes");
+    fn(message);
+    Console.WriteLine("despues");
+}
+
+
+//Func si retorna algo
+
+var showtwo = ShowTwo;
+
+SomeTwo(showtwo, "hola que tal dos");
+
+string ShowTwo(string message)
+{
+    return message.ToUpper();
+}
+void SomeTwo(Func<string, string> fn, string message) //string entrada, string salida
+{
+    Console.WriteLine("antes");
+    Console.WriteLine(fn(message));
+    Console.WriteLine("despues");
+}
